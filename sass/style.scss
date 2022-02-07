@@ -1,0 +1,409 @@
+@import './colors';
+@import './animation';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	scroll-padding-top: 82px;
+}
+
+body {
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+	background-color: $bg-color;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.underline {
+	margin: 0 auto 40px;
+	width: 60px;
+	height: 4px;
+	background-color: $main-color;
+}
+
+.long-underline {
+	margin: 20px auto 15px;
+	width: 95%;
+	height: 1px;
+	background-color: $light-grey;
+}
+
+.blue-text {
+	color: $main-color;
+}
+
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+nav {
+	text-transform: uppercase;
+	z-index: 1;
+	transition: background-color 0.6s;
+
+	.nav-link,
+	.navbar-brand,
+	.fa-bars {
+		color: $white;
+	}
+	.nav-link:hover,
+	.navbar-brand:hover {
+		color: $main-color;
+	}
+
+	.fa-bars {
+		padding: 10px;
+	}
+
+	.navbar-brand {
+		font-weight: bold;
+	}
+
+	.fa-headset {
+		margin-right: 5px;
+	}
+
+	.active {
+		color: $main-color;
+	}
+}
+
+header {
+	position: relative;
+	color: $white;
+
+	.hero-img {
+		position: relative;
+		height: 100vh;
+		background-image: url('../img/game-console_640.jpg');
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		z-index: 0;
+
+		.hero-bg {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.6);
+			z-index: -10;
+		}
+
+		.hero-text {
+			display: flex;
+			height: 100%;
+			padding: 10px;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			text-align: center;
+
+			h1 {
+				margin-bottom: 20px;
+				text-transform: uppercase;
+				font-size: 30px;
+			}
+
+			p {
+				font-size: 14px;
+			}
+
+			.btn-outline-light {
+				text-transform: uppercase;
+			}
+		}
+
+		.fa-chevron-down {
+			position: absolute;
+			bottom: 30px;
+			left: 50%;
+			transform: translate(-50%, 0);
+			font-size: 30px;
+			color: $white;
+		}
+	}
+}
+
+.about-us {
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+	.about-us-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+	.about-us-card-text {
+		font-size: 14px;
+	}
+
+	// .about-us-hover {
+	// 	transition: color 0.3s;
+	// }
+
+	.about-us-hover:hover {
+		color: $main-color;
+	}
+}
+
+.about-us-hero {
+	position: relative;
+	background-image: url(../img/technology_640.jpg);
+	background-size: cover;
+	background-position: center;
+	color: $light-grey;
+	z-index: 0;
+
+	.about-us-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: -5;
+	}
+
+	.about-us-hero-item {
+		margin: 10px 0;
+
+		i {
+			font-size: 36px;
+		}
+
+		.about-us-hero-title {
+			font-size: 24px;
+		}
+	}
+}
+
+.portfolio {
+	.carousel-item {
+		position: relative;
+		height: 600px;
+	}
+	.carousel-caption {
+		position: absolute;
+		left: 0;
+		right: 0;
+		padding: 40px 0;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+	.carousel-indicators {
+		padding-bottom: 15px;
+	}
+}
+
+.prices {
+	.price-box {
+		padding: 30px;
+		margin: 20px 10px 0 0;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+		background-color: $white;
+		transition: transform 0.3s;
+		span {
+			font-weight: bold;
+		}
+		h3 {
+			text-transform: uppercase;
+			color: $main-color;
+		}
+		.price-tag {
+			font-size: 30px;
+			font-weight: bold;
+		}
+		i {
+			padding: 0 5px;
+			font-size: 24px;
+		}
+		button {
+			padding: 10px 20px;
+			text-transform: uppercase;
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.team-hero {
+	position: relative;
+	background: url('../img/round-table-828546_640.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 0;
+	.team-hero-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: -5;
+	}
+	h2 {
+		color: $light-grey;
+	}
+	.card-title {
+		margin-bottom: 20px;
+		text-transform: uppercase;
+	}
+	.card {
+		transition: transform 0.3s;
+		.card-img-top {
+			height: 300px;
+			object-fit: cover;
+		}
+	}
+	a {
+		padding: 10px;
+	}
+
+	.card-body {
+		height: 160px;
+	}
+
+	.card:hover {
+		transform: scale(0.95);
+	}
+}
+
+.achievements {
+	.achivements-list {
+		padding: 20px 0;
+	}
+
+	i {
+		font-size: 40px;
+		color: $white;
+		text-shadow: 0 0 5px black;
+	}
+
+	.achivement-number {
+		font-size: 22px;
+	}
+
+	.achievement-text {
+		font-size: 13px;
+		text-transform: uppercase;
+	}
+}
+
+.contact-hero {
+	position: relative;
+	background-image: url('../img/smart-4168483_640.jpg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	color: $light-grey;
+	z-index: 0;
+	.contact-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: -5;
+	}
+	.contact-us {
+		display: flex;
+		align-items: center;
+	}
+
+	i {
+		margin-right: 15px;
+		font-size: 20px;
+		color: $light-grey;
+		transition: color 0.3s;
+	}
+
+	h3 {
+		text-transform: uppercase;
+	}
+	.underline {
+		background-color: $light-grey;
+	}
+	i:hover {
+		color: $main-color;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 400px) {
+	.team-hero {
+		.card {
+			.card-img-top {
+				height: 180px;
+			}
+		}
+	}
+}
+
+@media (min-width: 375px) {
+	header {
+		.hero-img {
+			.hero-text {
+				h1 {
+					font-size: 36px;
+				}
+				p {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	header {
+		.hero-img {
+			.hero-text {
+				h1 {
+					font-size: 42px;
+				}
+				p {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	nav {
+		height: 82px;
+	}
+	.about-us-hero {
+		background-image: url('../img/technology-HD.jpg');
+	}
+	.team-hero {
+		background-image: url('../img/round-table-828546.jpg');
+	}
+	.prices {
+		.price-info {
+			font-size: 18px;
+		}
+	}
+	.contact-hero {
+		background-image: url('../img/smart-4168483_1920.jpg');
+	}
+}
+
+@media (min-width: 1200px) {
+	header {
+		.hero-img {
+			background-image: url('../img/game-console_1920.jpg');
+		}
+	}
+	.price-box:hover {
+		transform: scale(1.05);
+	}
+}
